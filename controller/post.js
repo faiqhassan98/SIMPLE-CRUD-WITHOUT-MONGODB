@@ -24,7 +24,7 @@ function updatePost(req, res) {
     if (data) {
         const updId = posts.findIndex(post => post.id == upd);
         posts[updId].title = req.body.title
-        res.send(posts[updId]);
+        res.status(200).send(posts[updId]);
     } else {
         res.status(404).send('Status: Not Found')
     }

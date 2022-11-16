@@ -26,7 +26,7 @@ function updatePost(req, res) {
         posts[updId].title = req.body.title
         res.send(posts[updId]);
     } else {
-        res.send('Data not found');
+        res.status(404).send('Status: Not Found')
     }
 
 }
